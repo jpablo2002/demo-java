@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class SQLInjectionController {
+public class IndexController {
 
   private static Connection connection;
 
-  @GetMapping("/inject")
+  @GetMapping("/")
   @ResponseBody
   public List<Book> getBooks(@RequestParam(name = "name", required = false) String bookname,
       @RequestParam(name = "author", required = false) String bookauthor,
